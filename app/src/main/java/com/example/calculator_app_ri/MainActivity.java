@@ -56,11 +56,15 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.btnPlusMinus:
-                if (minusIsPresent(number)) {
-                    number = number.substring(1);
-                }else{
-                    number = "-" + number;
-                }
+                  if (numberIsZero(number)){
+                      number = "0";
+                  }else {
+                      if (minusIsPresent(number)) {
+                          number = number.substring(1);
+                      }else{
+                          number = "-" + number;
+                      }
+                  }
                 break;
         }
         etNumbers.setText(number);
@@ -139,6 +143,14 @@ public class MainActivity extends AppCompatActivity {
             }
             etNumbers.setText(result+"");
             operator = "";
+        }
+    }
+
+    private boolean numberIsZero(String number) {
+        if (number.equals("0") || number.equals("")){
+            return true;
+        }else {
+            return false;
         }
     }
 }
