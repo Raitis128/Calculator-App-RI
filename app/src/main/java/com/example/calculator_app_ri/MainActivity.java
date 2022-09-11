@@ -53,4 +53,21 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnMultiply: operator = "*" ; break;
         }
     }
+
+    public void clickEquals(View view) {
+        String newNumber = etNumbers.getText().toString();
+        Double result = 0.0;
+        switch (operator){
+            case "-": result = Double.parseDouble(oldNumber) - Double.parseDouble(newNumber) ; break;
+            case "+": result = Double.parseDouble(oldNumber) + Double.parseDouble(newNumber) ; break;
+            case "*": result = Double.parseDouble(oldNumber) * Double.parseDouble(newNumber) ; break;
+            case "/": result = Double.parseDouble(oldNumber) / Double.parseDouble(newNumber) ; break;
+        }
+        etNumbers.setText(result+"");
+    }
+
+    public void clickAC(View view) {
+        etNumbers.setText("0");
+        isNew = true;
+    }
 }
