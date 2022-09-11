@@ -113,6 +113,7 @@
                 android:layout_width="30pt"
                 android:layout_height="30pt"
                 android:layout_weight="1"
+                android:onClick="clickPercent"
                 android:text="@string/btnPercent"
                 android:backgroundTint="@color/btnColor"
                 android:textColor="@color/textColor"
