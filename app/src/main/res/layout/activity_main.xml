@@ -80,6 +80,7 @@
                 android:layout_height="30pt"
                 android:layout_weight="1"
                 android:text="7"
+                android:onClick="clickNumber"
                 android:backgroundTint="@color/btnColor"
                 android:textColor="@color/textColor"
                 />
@@ -89,6 +90,7 @@
                 android:layout_height="30pt"
                 android:layout_weight="1"
                 android:text="8"
+                android:onClick="clickNumber"
                 android:backgroundTint="@color/btnColor"
                 android:textColor="@color/textColor"
                 />
@@ -98,6 +100,7 @@
                 android:layout_height="30pt"
                 android:layout_weight="1"
                 android:text="9"
+                android:onClick="clickNumber"
                 android:backgroundTint="@color/btnColor"
                 android:textColor="@color/textColor"
                 />
@@ -122,6 +125,7 @@
                 android:layout_height="30pt"
                 android:layout_weight="1"
                 android:text="4"
+                android:onClick="clickNumber"
                 android:backgroundTint="@color/btnColor"
                 android:textColor="@color/textColor"
                 />
@@ -131,6 +135,7 @@
                 android:layout_height="30pt"
                 android:layout_weight="1"
                 android:text="5"
+                android:onClick="clickNumber"
                 android:backgroundTint="@color/btnColor"
                 android:textColor="@color/textColor"
                 />
@@ -140,6 +145,7 @@
                 android:layout_height="30pt"
                 android:layout_weight="1"
                 android:text="6"
+                android:onClick="clickNumber"
                 android:backgroundTint="@color/btnColor"
                 android:textColor="@color/textColor"
                 />
@@ -164,6 +170,7 @@
                 android:layout_height="30pt"
                 android:layout_weight="1"
                 android:text="1"
+                android:onClick="clickNumber"
                 android:backgroundTint="@color/btnColor"
                 android:textColor="@color/textColor"
                 />
@@ -173,6 +180,7 @@
                 android:layout_height="30pt"
                 android:layout_weight="1"
                 android:text="2"
+                android:onClick="clickNumber"
                 android:backgroundTint="@color/btnColor"
                 android:textColor="@color/textColor"
                 />
@@ -182,6 +190,7 @@
                 android:layout_height="30pt"
                 android:layout_weight="1"
                 android:text="3"
+                android:onClick="clickNumber"
                 android:backgroundTint="@color/btnColor"
                 android:textColor="@color/textColor"
                 />
@@ -212,6 +221,7 @@
                 android:layout_height="30pt"
                 android:layout_weight="2"
                 android:text="0"
+                android:onClick="clickNumber"
                 android:backgroundTint="@color/btnColor"
                 android:textColor="@color/textColor"
                 />
