@@ -37,8 +37,21 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnEight: number = number + "8"; break;
             case R.id.btnNine: number = number + "9"; break;
             case R.id.btnZero: number = number + "0"; break;
-            case R.id.btnDot: number = number + "."; break;
-            case R.id.btnPlusMinus: number = "-" + number; break;
+
+            case R.id.btnDot:
+                if (dotIsPresent(number)) {
+                }else {
+                number = number + ".";
+                }
+                break;
+
+            case R.id.btnPlusMinus:
+                if (minusIsPresent(number)) {
+                    number = number.substring(1);
+                }else{
+                    number = "-" + number;
+                }
+                break;
         }
         etNumbers.setText(number);
     }
@@ -69,5 +82,21 @@ public class MainActivity extends AppCompatActivity {
     public void clickAC(View view) {
         etNumbers.setText("0");
         isNew = true;
+    }
+
+    public boolean dotIsPresent(String number) {
+        if (number.indexOf(".") == -1 ){
+            return false;
+        }else {
+            return true;
+        }
+    }
+
+    public boolean minusIsPresent(String number) {
+        if (number.charAt(0) == '-') {
+            return true;
+        }else {
+            return false;
+        }
     }
 }
