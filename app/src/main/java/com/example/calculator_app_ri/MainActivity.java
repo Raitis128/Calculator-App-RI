@@ -27,25 +27,66 @@ public class MainActivity extends AppCompatActivity {
         isNew = false;
         String number = etNumbers.getText().toString();
         switch (view.getId()){
-            case R.id.btnOne: number = number + "1";
-                break;
-            case R.id.btnTwo: number = number + "2";
-                break;
-            case R.id.btnThree: number = number + "3";
-                break;
-            case R.id.btnFour: number = number + "4";
-                break;
-            case R.id.btnFive: number = number + "5";
-                break;
-            case R.id.btnSix: number = number + "6";
-                break;
-            case R.id.btnSeven: number = number + "7";
-                break;
-            case R.id.btnEight: number = number + "8";
-                break;
-            case R.id.btnNine: number = number + "9";
-                break;
-            case R.id.btnZero: number = number + "0";
+            case R.id.btnOne:
+                if (zeroIsFirst(number)){
+                    number = number.substring(1);
+                }
+                number = number + "1";
+                    break;
+            case R.id.btnTwo:
+                if (zeroIsFirst(number)){
+                    number = number.substring(1);
+                }
+                number = number + "2";
+                    break;
+            case R.id.btnThree:
+                if (zeroIsFirst(number)){
+                    number = number.substring(1);
+                }
+                number = number + "3";
+                    break;
+            case R.id.btnFour:
+                if (zeroIsFirst(number)){
+                    number = number.substring(1);
+                }
+                number = number + "4";
+                    break;
+            case R.id.btnFive:
+                if (zeroIsFirst(number)){
+                    number = number.substring(1);
+                }
+                number = number + "5";
+                    break;
+            case R.id.btnSix:
+                if (zeroIsFirst(number)){
+                    number = number.substring(1);
+                }
+                number = number + "6";
+                    break;
+            case R.id.btnSeven:
+                if (zeroIsFirst(number)){
+                    number = number.substring(1);
+                }
+                number = number + "7";
+                    break;
+            case R.id.btnEight:
+                number = number + "8";
+                if (zeroIsFirst(number)){
+                    number = number.substring(1);
+                }
+                    break;
+            case R.id.btnNine:
+                if (zeroIsFirst(number)){
+                    number = number.substring(1);
+                }
+                number = number + "9";
+                    break;
+            case R.id.btnZero:
+                if (zeroIsFirst(number) && number.length() == 1){
+                    number = "0";
+                }else {
+                    number = number + "0";
+                }
                 break;
 
             case R.id.btnDot:
@@ -69,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
         }
         etNumbers.setText(number);
     }
+
 
     public void btnOperator(View view) {
         isNew = true;
@@ -148,6 +190,18 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean numberIsZero(String number) {
         if (number.equals("0") || number.equals("")){
+            return true;
+        }else {
+            return false;
+        }
+
+    }
+
+    private boolean zeroIsFirst(String number) {
+        if (number.equals("")){
+            return true;
+        }
+        if (number.charAt(0) == '0') {
             return true;
         }else {
             return false;
