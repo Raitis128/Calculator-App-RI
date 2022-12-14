@@ -1,5 +1,9 @@
 package com.example.calculator_app_ri;
 
+import static com.example.calculator_app_ri.CalculatorFunctions.dotIsPresent;
+import static com.example.calculator_app_ri.CalculatorFunctions.minusIsPresent;
+import static com.example.calculator_app_ri.CalculatorFunctions.numberIsZero;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -37,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnEight: number = number + "8"; break;
             case R.id.btnNine: number = number + "9"; break;
             case R.id.btnZero:
-                if (zeroIsFirst(number) && number.length() == 1){
+                if (CalculatorFunctions.zeroIsFirst(number) && number.length() == 1){
                     number = "0";
                 }else {
                     number = number + "0";
@@ -103,22 +107,6 @@ public class MainActivity extends AppCompatActivity {
         isNew = true;
     }
 
-    public boolean dotIsPresent(String number) {
-        if (number.indexOf(".") == -1 ){
-            return false;
-        }else {
-            return true;
-        }
-    }
-
-    public boolean minusIsPresent(String number) {
-        if (number.charAt(0) == '-') {
-            return true;
-        }else {
-            return false;
-        }
-    }
-
     public void clickPercent(View view) {
         if (operator == ""){
             String number = etNumbers.getText().toString();
@@ -140,26 +128,6 @@ public class MainActivity extends AppCompatActivity {
             }
             etNumbers.setText(result+"");
             operator = "";
-        }
-    }
-
-    private boolean numberIsZero(String number) {
-        if (number.equals("0") || number.equals("")){
-            return true;
-        }else {
-            return false;
-        }
-
-    }
-
-    private boolean zeroIsFirst(String number) {
-        if (number.equals("")){
-            return true;
-        }
-        if (number.charAt(0) == '0') {
-            return true;
-        }else {
-            return false;
         }
     }
 }
